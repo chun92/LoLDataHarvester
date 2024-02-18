@@ -7,8 +7,9 @@ LoLDataHarvester is a project dedicated to collecting match datasets from the po
 To begin collecting your League of Legends match datasets, follow these steps:
 
 1. Create a Riot account at [Riot Developer Portal](https://developer.riotgames.com/).
-2. Obtain a Development Key.
-3. Alternatively, you can get an API key by registering a product.
+2. Obtain a Development Key for test.
+    ![image](https://github.com/chun92/LoLDataHarvester/assets/3786258/3588c550-5ad1-4ea2-b908-fb391becda32)
+3. To use it in product environment, you can get an API key by registering a product.
 4. Update the "api_key" in the `config.json.example` file with your API key and rename the file to `config.json`:
     ```json
     {
