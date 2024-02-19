@@ -184,10 +184,13 @@ def get_match(api_key, match_id, region=LoLRegion.ASIA):
         logging.info(f"Retrieved match {match_id}.")
 
         try:
-            end_of_game_result = response["info"]["endOfGameResult"]
-            if end_of_game_result != "GameComplete":
-                logging.error(f"Match {match_id} is not complete.")
-                return None
+            if "endOfGameResult" not in response["info"]:
+                logging.warn(f"Match {match_id} has no end of game result.")
+            else:
+                end_of_game_result = response["info"]["endOfGameResult"]
+                if end_of_game_result != "GameComplete":
+                    logging.warn(f"Match {match_id} is not complete.")
+                    return None
             results = {}
 
             game_version = response["info"]["gameVersion"]
