@@ -167,3 +167,5 @@ key/config.json
 
 # local database
 db/
+
+log/
